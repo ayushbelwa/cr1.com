@@ -1,0 +1,33 @@
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255) !important;
+    justify-content: center;
+    border-radius: 7px 7px 7px 7px;
+    align-items: center;
+
+}
+
+.login {
+    color: rgb(123, 123, 123);
+    text-decoration: none;
+}
+
+.login:hover {
+    color: rgb(255, 122, 231);
+
+}

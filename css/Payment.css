@@ -1,0 +1,70 @@
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #c560ff;
+    background-color: #ffffff;
+    background-clip: padding-box;
+    border: 1px solid #d1d1d1;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .375rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.container {
+
+    border-radius: 5px 5px 5px 5px;
+}
+
+.btn {
+    border: 1px solid #ffffff !important;
+    background-color: #8d1efc;
+    color: #f5f5f5 !important;
+}
+
+.form-check-input:checked {
+    background-color: #bc40ff;
+    border-color: #a2a2a2;
+}
+
+.bhom {
+    font-size: 12px;
+
+}
+
+.rs {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.summ {
+    color: #8d1efc;
+}
+
+#ct {
+    border-bottom: 1px solid #ebebeb;
+}
+
+.Sub {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.rs1 {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+#ss {
+    border-bottom: 1px solid #eeeeee;
+}
+
+.total1 {
+    font-size: 16px;
+    font-weight: bold;
+}
