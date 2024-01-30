@@ -1,0 +1,519 @@
+<?php
+include('./include/connect.php');
+include('./include/common_function.php')
+?>
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Poiret+One&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Julius+Sans+One&family=Poiret+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/Product.css">
+
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+
+        <div class="container-fluid mb-1 mt-3 p-5 d-flex" id="e1">
+            <i class="bi bi-arrow-left-circle" style="font-size: 35px; color: blueviolet;"></i>
+            <h1 class="shop1 mx-5">Product</h1>
+        </div>
+
+        <div class="container d-none d-md-block mb-5 ">
+            <div class="row p-5 pt-3 mb-5">
+                <!-- <?php
+                get_products_id();
+                ?> -->
+                <div class='col'>
+                    <span class="badge  rounded-0 w-100" style="background-color: #ff00a5;">Sales</span>
+                    <img src='./admin_pannel/product_images/p1.jpg' class='card-img-top' alt=''>
+
+                </div>
+                <div class='col p-3'>
+                    <div class='title mb-4' style="font-family:'Poiret One',cursive;font-size: 35px;font-weight: bold;">
+                        Magenta Rainforest
+                    </div>
+                    <div class="button-container d-flex gap-1 mb-4">
+                        <button class="dec" id="sub">-
+                        </button>
+                        <input type="text" name="quantity" class="input-filed" value="0" id="qtybox" readonly="" />
+                        <button class="inc" id="add">+
+                        </button>
+                    </div>
+
+                    <div class="price d-flex mb-5">
+                        <p class="discount"><i class="bi bi-currency-rupee"></i>100.00</p>
+                        <p class="prices mx-1"><i class="bi bi-currency-rupee"></i>300.00</p>
+                        <span class="fw-bold" style="color: #fb74cc;font-size: 1.5rem;">(25%off)</span>
+                    </div>
+
+                    <div class="details">
+                        <p class="detail">I cut off about half of the stem of each eye pin and inserted it into the clay
+                            before baking it. It’s essential to keep in mind that you’ll want each attachment point to
+                            be at a 90-degree angle from the other to have your triangles hang flatly.
+
+                            Because the earring hook will be attached after the clay has cured – either by baking in my
+                            case or by air if you choose an air-dry clay – you’ll have to keep in mind what angle you
+                            want each eye pin in.</p>
+                    </div>
+
+                    <footer>
+                        <div class="footer  d-grid gap-2">
+                            <a href="index.php?add_to_cart=$product_id"><button class="btn w-100" type="submit"
+                                    style="font-family: ' Julius Sans One', sans-serif;">Add To Cart</button></a>
+                            <button class="btn w-100 " type="submit"
+                                style="background-color: blueviolet; color: whitesmoke !important; border:1px solid blueviolet; font-family: 'Julius Sans One', sans-serif"><i
+                                    class='bi bi-heart mt-2 mx-2'
+                                    style='color: rgb(255, 255, 255) !important;'></i>Wishlist</button>
+
+
+                        </div>
+                    </footer>
+                </div>
+            </div>
+            <div class="container mt-5">
+                <div class="title mx-5 mb-5 text-center  ">
+                    <h1 style="color: blueviolet; font-family: 'Gloock', serif; font-weight:bold;">You may also like
+                    </h1>
+                </div>
+                <div class="container">
+                    <div class="container-fluid pt-4" style="text-align: end;">
+                        <div class="container pb-3">
+                            <button type="button" class="btn btn-white btn-sm rounded-4 mb-3" id="button"
+                                style="border: 1px solid rgb(167, 16, 255);">View More</button>
+                        </div>
+                    </div>
+                    <div class="container mx-2">
+
+                        <!-- get_related_pro();
+                        ?> -->
+                        <div class="owl-carousel owl-theme" id="carousel2">
+                            <div class="item">
+                                <div class='card border-0'>
+                                    <span class="badge  rounded-0" style="background-color: #ff00a5;">Sales</span>
+                                    <div class='url'>
+                                        <div class='imgs'>
+                                            <img src="/admin_pannel/product_images/craf-4.jpg" class='card-img-top'
+                                                alt=''>
+                                        </div>
+                                    </div>
+                                    <div class='card-body'>
+                                        <a href="product.php?product_id=$product_id"><span class="card-title"> Bhomia
+                                                Blush</span></a>
+                                        <div class="pre d-flex">
+                                            <p class="dis"><i class="bi bi-currency-rupee"></i>100.00</p>
+                                            <p class="pre mx-1"><i class="bi bi-currency-rupee"></i>300.00</p>
+                                            <span class="fw-bold"
+                                                style="color: #fb74cc;font-size: 0.9rem;">(25%off)</span>
+                                        </div>
+                                        <div class="container-fluid d-flex ps-0">
+                                            <div class='container-fluid d-flex ps-0'>
+                                                <a href='index.php?add_to_cart=$product_id'><button
+                                                        class='custom-btn btn-3 mx-2'><span>Add To
+                                                            Cart</span></button></a>
+                                                <a href='product.php?product_id=$product_id'><button
+                                                        class='custom-btn btn-3 '><span>View
+                                                            Details</span></button></a>
+
+
+                                            </div>
+                                            <button class="border-0 bg-white"><a
+                                                    href='index.php?add_to_wish=$product_id'><i class='bi bi-heart mt-2'
+                                                        style='color: rgb(167, 16, 255) !important;'></i></a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='item'>
+                                <div class='card border-0'>
+                                    <span class="badge  rounded-0" style="background-color: #ff00a5;">Sales</span>
+                                    <div class='url'>
+                                        <div class='imgs'>
+                                            <img src='/admin_pannel/product_images/p4.jpg' class='card-img-top' alt=''>
+                                        </div>
+                                    </div>
+                                    <div class='card-body'>
+                                        <a href="product.php?product_id=$product_id"><span class="card-title">Magenta
+                                                Rainforest</span></a>
+                                        <div class="ru1 d-flex">
+                                            <p class="ru"><i class="bi bi-currency-rupee"></i>100.00</p>
+                                            <p class="ru1 mx-1"><i class="bi bi-currency-rupee"></i>300.00</p>
+                                            <span class="fw-bold"
+                                                style="color: #fb74cc;font-size: 0.9rem;">(25%off)</span>
+                                        </div>
+                                        <div class="container-fluid d-flex ps-0">
+                                            <div class='container-fluid d-flex ps-0'>
+                                                <a href='index.php?add_to_cart=$product_id'><button
+                                                        class='custom-btn btn-3 mx-2'><span>Add To
+                                                            Cart</span></button></a>
+                                                <a href='product.php?product_id=$product_id'><button
+                                                        class='custom-btn btn-3 '><span>View
+                                                            Details</span></button></a>
+
+
+                                            </div>
+                                            <button class="border-0 bg-white"><a
+                                                    href='index.php?add_to_wish=$product_id'><i class='bi bi-heart mt-2'
+                                                        style='color: rgb(167, 16, 255) !important;'></i></a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='item'>
+                                <div class='card border-0'>
+                                    <span class="badge  rounded-0" style="background-color: #ff0077;">Sales &
+                                        Trending</span>
+                                    <div class='url'>
+                                        <div class='imgs'>
+                                            <img src="admin_pannel/product_images/wh-1.jpeg" class='card-img-top'
+                                                alt=''>
+                                        </div>
+                                    </div>
+                                    <div class='card-body'>
+                                        <a href="product.html"><span class="card-title">Bhomia
+                                                Blush</span></a>
+                                        <div class=" d-flex">
+                                            <p class="dis"><i class="bi bi-currency-rupee"></i>100.00</p>
+                                            <p class="pre mx-1"><i class="bi bi-currency-rupee"></i>300.00</p>
+                                            <span class="fw-bold"
+                                                style="color: #fb74cc;font-size: 0.9rem;">(25%off)</span>
+                                        </div>
+                                        <div class="container-fluid d-flex ps-0">
+                                            <div class='container-fluid d-flex ps-0'>
+                                                <a href='index.php?add_to_cart=$product_id'><button
+                                                        class='custom-btn btn-3 mx-2'><span>Add To
+                                                            Cart</span></button></a>
+                                                <a href='product.php?product_id=$product_id'><button
+                                                        class='custom-btn btn-3 '><span>View
+                                                            Details</span></button></a>
+
+
+                                            </div>
+                                            <button class="border-0 bg-white"><a
+                                                    href='index.php?add_to_wish=$product_id'><i class='bi bi-heart mt-2'
+                                                        style='color: rgb(167, 16, 255) !important;'></i></a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='item'>
+                                <div class='card border-0'>
+                                    <span class="badge  rounded-0" style="background-color: #ff00a5;">Sales</span>
+                                    <div class='url'>
+                                        <div class='imgs'>
+                                            <img src="admin_pannel/product_images/craf-8.jpg" class='card-img-top'
+                                                alt=''>
+                                        </div>
+                                    </div>
+                                    <div class='card-body'>
+                                        <a href="product.php?product_id=$product_id"><span class="card-title">Bhomia
+                                                Blush</span></a>
+                                        <div class="pre d-flex">
+                                            <p class="dis"><i class="bi bi-currency-rupee"></i>100.00</p>
+                                            <p class="pre mx-1"><i class="bi bi-currency-rupee"></i>300.00</p>
+                                            <span class="fw-bold"
+                                                style="color: #fb74cc;font-size: 0.9rem;">(25%off)</span>
+                                        </div>
+                                        <div class="container-fluid d-flex ps-0">
+                                            <div class='container-fluid d-flex ps-0'>
+                                                <a href='index.php?add_to_cart=$product_id'><button
+                                                        class='custom-btn btn-3 mx-2'><span>Add To
+                                                            Cart</span></button></a>
+                                                <a href='product.php?product_id=$product_id'><button
+                                                        class='custom-btn btn-3 '><span>View
+                                                            Details</span></button></a>
+
+
+                                            </div>
+                                            <button class="border-0 bg-white"><a
+                                                    href='index.php?add_to_wish=$product_id'><i class='bi bi-heart mt-2'
+                                                        style='color: rgb(167, 16, 255) !important;'></i></a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <div class="container-fluid  d-block d-md-none ">
+
+        <div class="row d-grid">
+            <div class="col">
+                <img src="/admin_pannel/product_images/p1.jpg" class='img-fluid' alt=''>
+            </div>
+            <div class="col mt-3 ">
+                <div class='title mb-2'
+                    style="font-family:'Poiret One',cursive;font-size: 24px;font-weight: bold; text-transform: uppercase;">
+                    Magenta Rainforest
+                </div>
+                <div class="button-container d-flex gap-1 mb-2">
+                    <button class="dec" id="sub">-
+                    </button>
+                    <input type="text" name="quantity" class="input-filed" value="0" id="qtybox" readonly="" />
+                    <button class="inc" id="add">+
+                    </button>
+                </div>
+                <div class="price" style="font-family:'Poiret One',cursive">
+                    <p class="card-text fw-bold" style="color: black; "><i class="bi bi-currency-rupee"></i>200.00</p>
+                </div>
+                <div class="details">
+                    <p class="detail">I cut off about half of the stem of each eye pin and inserted it into the clay
+                        before baking it. It’s essential to keep in mind that you’ll want each attachment point to
+                        be at a 90-degree angle from the other to have your triangles hang flatly.
+
+                        Because the earring hook will be attached after the clay has cured – either by baking in my
+                        case or by air if you choose an air-dry clay – you’ll have to keep in mind what angle you
+                        want each eye pin in.</p>
+                </div>
+
+
+                <div class="footer d-grid gap-2">
+                    <a href="index.php?add_to_cart=$product_id"><button class="btn w-100" type="submit"
+                            style="font-family: ' Julius Sans One', sans-serif;">Add To Cart</button></a>
+
+                    <button class="btn w-100 " type="submit"
+                        style="background-color: blueviolet; color: whitesmoke !important; border:1px solid blueviolet; font-family: 'Julius Sans One', sans-serif"><i
+                            class='bi bi-heart mt-2 mx-2'
+                            style='color: rgb(255, 255, 255) !important;'></i>Wishlist</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center mb-5 mt-5 d-block d-md-none  ">
+        <span class="shop ">You may also Like</span>
+    </div>
+    <div class="container-fluid pt-4" style="text-align: end;">
+        <div class="container pb-3">
+            <button type="button" class="btn btn-white btn-sm rounded-4 mb-3" id="button"
+                style="border: 1px solid rgb(167, 16, 255);">View More</button>
+        </div>
+    </div>
+    <div class="container-fluid d-block d-md-none ">
+        <div class="row row-cols-2 ">
+            <div class="col g-0 ">
+                <div class="card mx-0 border-0" style="width: auto; height: 18.9rem;">
+
+                    <div class="img" style="width:12.1rem; height: 12.1rem;">
+                        <img src="admin_pannel/product_images/craf-1.jpg" class="card-img-top" alt="..."
+                            style="object-fit: cover; width: 12.1rem; height: 12.3rem;">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 0.8rem;">BHOMIA BLUSH</h5>
+
+                        <div class="s2 d-flex">
+                            <p class="s1"><i class="bi bi-currency-rupee"></i>100.00</p>
+                            <p class="s2 "><i class="bi bi-currency-rupee"></i>300.00</p>
+
+                        </div>
+                        <div class="container-fluid text-end mb-2">
+                            <i class="bi bi-heart" style="color: rgb(230, 147, 255) !important;">
+                            </i>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col p-0">
+                <div class="card pb-2 border-0 rounded-0" style="width: auto; height: 18.9rem;">
+                    <div class="img" style="width:12.1rem; height: 12.1rem;">
+
+                        <img src="admin_pannel/product_images/p1.jpg" class="card-img-top" alt="..."
+                            style="object-fit: cover; width: 12.1rem; height: 12.3rem;">
+
+                    </div>
+                    <div class="card-body">
+
+                        <h5 class="card-title" style="font-size: 0.8rem;">BHOMIA BLUSH</h5>
+                        <div class="s2 d-flex">
+                            <p class="s1"><i class="bi bi-currency-rupee"></i>100.00</p>
+                            <p class="s2 "><i class="bi bi-currency-rupee"></i>300.00</p>
+
+                        </div>
+                        <div class="container-fluid text-end mb-2">
+                            <i class="bi bi-heart" style="color: rgb(230, 147, 255) !important;">
+                            </i>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col p-0">
+                <div class="card pb-2 border-0" style="width: auto; height: 18.9rem;">
+                    <div class="img" style="width:12.1rem; height: 12.1rem;">
+                        <img src="admin_pannel/product_images/p3.jpg" class="card-img-top" alt="..."
+                            style="object-fit: cover; width: 12.1rem; height: 12.3rem;">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 0.8rem;">BHOMIA BLUSH</h5>
+                        <div class="s2 d-flex">
+                            <p class="s1"><i class="bi bi-currency-rupee"></i>100.00</p>
+                            <p class="s2 "><i class="bi bi-currency-rupee"></i>300.00</p>
+
+                        </div>
+                        <div class="container-fluid text-end mb-2">
+                            <i class="bi bi-heart" style="color: rgb(230, 147, 255) !important;">
+                            </i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col g-0 ">
+                <div class="card mx-0 border-0" style="width: auto; height: 18.9rem;">
+                    <div class="img" style="width:12.1rem; height: 12.1rem;">
+                        <img src="admin_pannel/product_images/craf-5.jpg" class="card-img-top" alt="..."
+                            style="object-fit: cover; width: 12.1rem; height: 12.3rem;">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 0.8rem;">MAGENTA RAINFOREST</h5>
+                        <div class="s2 d-flex">
+                            <p class="s1"><i class="bi bi-currency-rupee"></i>100.00</p>
+                            <p class="s2 "><i class="bi bi-currency-rupee"></i>300.00</p>
+
+                        </div>
+                        <div class="container-fluid text-end mb-2">
+                            <i class="bi bi-heart" style="color: rgb(230, 147, 255) !important;">
+                            </i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col g-0 ">
+                <div class="card mx-0 border-0" style="width: auto; height: 18.9rem; ">
+
+                    <div class="img" style="width:12.1rem; height: 12.1rem;">
+                        <img src="admin_pannel/product_images/craf-3.jpg" class="card-img-top" alt="..."
+                            style="object-fit: cover; width: 12.1rem; height: 12.3rem;">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 0.8rem;">BHOMIA BLUSH</h5>
+                        <div class="s2 d-flex">
+                            <p class="s1"><i class="bi bi-currency-rupee"></i>100.00</p>
+                            <p class="s2 "><i class="bi bi-currency-rupee"></i>300.00</p>
+                            <!-- <span class="fw-bold " style="color: #fb74cc;font-size: 0.8rem;">(25%off)</span> -->
+                        </div>
+                        <div class="container-fluid text-end mb-2">
+                            <i class="bi bi-heart" style="color: rgb(230, 147, 255) !important;">
+                            </i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col g-0">
+                <div class="card pb-2 border-0" style="width: auto; height: 18.9rem;">
+                    <div class="img" style="width:12.1rem; height: 12.1rem;">
+                        <img src="admin_pannel/product_images/p4.jpg" class="card-img-top" alt="..."
+                            style="object-fit: cover; width: 12.1rem; height: 12.3rem;">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 0.8rem;">BHOMIA BLUSH</h5>
+                        <div class="s2 d-flex">
+                            <p class="s1"><i class="bi bi-currency-rupee"></i>100.00</p>
+                            <p class="s2 "><i class="bi bi-currency-rupee"></i>300.00</p>
+                            <!-- <span class="fw-bold " style="color: #fb74cc;font-size: 0.8rem;">(25%off)</span> -->
+                        </div>
+                        <div class="container-fluid text-end mb-2">
+                            <i class="bi bi-heart" style="color: rgb(230, 147, 255) !important;">
+                            </i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <script>
+        let addBtn = document.querySelector('#add');
+        let subBtn = document.querySelector('#sub');
+        let qty = document.querySelector('#qtybox');
+        addBtn.addEventListener('click', () => {
+            qty.value = parseInt(qty.value) + 1;
+        });
+        subBtn.addEventListener('click', () => {
+            if (qty.value <= 0) {
+                qty.value = 0;
+            } else {
+                qty.value = parseInt(qty.value) - 1;
+            }
+        });
+
+        $(document).ready(function () {
+            $('#carousel2').owlCarousel({
+                loop: false,
+                margin: 10,
+                responsiveClass: true,
+                nav: false,
+                dots: false,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: false
+                    },
+                    600: {
+                        items: 2,
+                        nav: false
+                    },
+                    1000: {
+                        items: 3,
+                        nav: false,
+                        loop: false
+                    }
+                }
+            });
+        })
+    </script>
+
+    <script src="js/quntity.js"></script>
+
+
+    <script src=" https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+
+
+</body>
+
+</html>

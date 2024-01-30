@@ -1,0 +1,110 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <span class="minus">-</span>
+        <span class="num">01</span>
+        <span class="plus">+</span>
+    </div>
+    <script>
+        const plus = document.querySelector(".plus"),
+            minus = document.querySelector(".minus"),
+            num = document.querySelector(".num");
+
+        let a = 1;
+        plus.addEventListner("click", () => {
+            a++;
+            a = (a < 10) ? "0" + a : a;
+            num.innerText = a;
+            cansole.log(a);
+        });
+        minus.addEventListner("click", () => {
+            if (a > 1) {
+                a--;
+                a = (a < 10) ? "0" + a : a;
+                num.innerText = a;
+                cansole.log(a);
+            }
+        });
+
+    </script>
+
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div class="box">
+        <div class="dec button" style="cursor:pointer">-</div>
+        <input type="text" name="qty" id="1" value="0" class="input-field">
+        <div class="inc button" style="cursor:pointer">+</div>
+
+    </div>
+    <script>
+        var incrementButton = document.getElementsByClassName('inc button');
+        var decrementButton = document.getElementsByClassName('dec button');
+
+        for (var i = 0; i < incrementButton.length; i++) {
+            var button = icrementButton[i];
+            button.addEventListner('click', function (event) {
+                var buttonClicked = event.target;
+                var input = buttonClicked.parentElement.children[2];
+                var inputValue = input.inputValue;
+                var newValue = parseInt(inputValue) + 1;
+                input.value = newValue;
+            })
+        }
+        for (var i = 0; i < decrementButton.length; i++) {
+            var button = decrementButton[i];
+            button.addEventListner('click', function (event) {
+                var buttonClicked = event.target;
+                var input = buttonClicked.parentElement.children[2];
+                var inputValue = input.inputValue;
+                var newValue = parseInt(inputValue) - 1;
+                input.value = newValue;
+            })
+        }
+    </script> -->
+    <div class="">
+        <h2 class="text-center">Increament and Decriment</h2>
+        <button id="sub">-</button>
+        <input type="text" id="qtybox" readonly="" value="0">
+        <button id="add">+</button>
+    </div>
+    <script type="text/javascript">
+        let addBtn = document.querySelector('#add');
+        let subBtn = document.querySelector('#sub');
+        let qty = document.querySelector('#qtybox');
+        addBtn.addEventListener('click', () => {
+            qty.value = parseInt(qty.value) + 1;
+        });
+        subBtn.addEventListener('click', () => {
+            if (qty.value <= 0) {
+                qty.value = 0;
+            }
+            else {
+                qty.value = parseInt(qty.value) - 1;
+
+            }
+        });
+    </script>
+</body>
+
+</html>
