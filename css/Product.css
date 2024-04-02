@@ -216,7 +216,7 @@ swiper-slide img {
     height: 1px;
     width: 64px;
     color: #7e7e7e;
-    top: 85.3%;
+    top: 82.3%;
     left: 19px;
     background: #707070;
     font-weight: bold;
@@ -241,6 +241,13 @@ a .card-title:hover {
 .font-2 {
     font-family: 'laurenregular';
     text-align: center;
+}
+
+.imgs img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
 }
 
 input:focus,
@@ -318,12 +325,29 @@ element.style {
     cursor: pointer;
 }
 
-.imgs {
+
+.imgs img {
     width: 100%;
-    height: 406px;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (min-width:992px) {
+    .imgs img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.imgs {
+
     background-size: cover;
     transition: all 1.1s;
 }
+
 
 #imgq {
     width: 50px;
@@ -399,8 +423,8 @@ a .card-title:hover {
     width: 67px;
     color: #7e7e7e;
     background: #707070;
-    top: 48.9%;
-    right: 628px;
+    top: 38%;
+    right: 840px;
 }
 
 .dis {
