@@ -5,8 +5,8 @@
 
 @font-face {
     font-family: 'laurenregular';
-    src: url('/font/lauren-regular.woff2') format('woff2'),
-        url('/font/lauren-regular.woff') format('woff');
+    src: url('css/font/lauren-regular.woff2') format('woff2'),
+        url('css/font/lauren-regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -14,8 +14,8 @@
 
 @font-face {
     font-family: 'donau_uppercaseneue';
-    src: url('/font/donau_neue_uppercase.woff2') format('woff2'),
-        url('/font/donau_neue_uppercase.woff') format('woff');
+    src: url('css/font/donau_neue_uppercase.woff2') format('woff2'),
+        url('css/font/donau_neue_uppercase.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
